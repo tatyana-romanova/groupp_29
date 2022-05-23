@@ -1,0 +1,66 @@
+GitHub. HW_2
+1. На локальном репозитории сделать ветки для:
+- Postman	git checkout -b Postman
+- Jmeter	git checkout -b Jmeter    
+- CheckLists	git checkout -b CheckLists	
+- Bug Reports	git checkout -b Bug_Reports
+- SQL		git checkout -b SQL	
+- Charles	git checkout -b Charles	
+- Mobile testing	git checkout -b Mobile_testing
+
+2. Запушить все ветки на внешний репозиторий
+
+git push -u origin Postman
+git push -u origin Jmeter
+git push -u origin CheckLists
+git push -u origin Bug_Reports
+git push -u origin Charles	
+git push -u origin SQL	
+git push -u origin Mobile_testing
+
+
+Или одной операцией запушить все ветки:
+git push -u origin -all 
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+git switch Bug_Reports
+touch bug_reports.txt
+vim bug_reports.txt
+
+Структура баг репорта:
+Название поля в карточке должно быть Дата рождения
+Шаг 1. На вкладке Главная нажать Добавить пользователя
+Шаг 2. Перейти к полю Дата рождения
+Результат: Название поля Дата
+Ожидаемый результат: Название поля Дата рождения должно соответствовать требованиям
+:wq (выход из vim)
+
+4. Запушить структуру багрепорта на внешний репозиторий
+git add .
+git commit -m "add bug"
+git push
+5. Вмержить ветку Bag Reports в Main
+
+Перейти на ветку Main: git switch main
+git merge Bug_Reports
+
+6. Запушить main на внешний репозиторий.
+git push origin main
+
+7. В ветке CheckLists набросать структуру чек листа.
+
+Перейти на ветку CheckLists: git switch CheckLists 
+touch checkLists.txt
+vim checkLists.txt
+
+8. Запушить структуру на внешний репозиторий
+git add .
+git commit -m "add checkLists"
+git push
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+
+На внешнем репозитори нажать кнопку Create pull request - Create pull request - Merge pull request - Confirm merge
+
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
